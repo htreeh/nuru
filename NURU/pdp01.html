@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+    <html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>pdp01</title>
+        <script src="./jquery/pdp01.js" defer></script>
+        <link rel="stylesheet" href="css/pdp01.css">
+        <link rel="stylesheet" href="./css/wishlist-dialog.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div id="top-banner">
+            <div class="banner-content">
+                <span class="banner-text active">NURU 회원가입 시 10% 할인쿠폰 지급</span>
+                <span class="banner-text">3만원 이상 구매 시 무료배송</span>
+                <span class="banner-text">신규 회원 첫 구매 5% 추가 적립</span>
+            </div>
+        </div>
+        <div id="wrap">
+            <header id="header">
+                <div class="gnb">
+
+                        <div class="logo">
+                            <a href="main.html">
+                                <img src="./img/logo.svg" alt="느루 로고 이미지입니다.">
+                            </a>
+                        </div>
+
+                        <ul class="icon-gnb">
+                            <li>
+                                <div class="header-search">
+                                    <button class="search-toggle" type="button" aria-label="검색창 열기">
+                                        <img src="./img/search.png" alt="아이콘">
+                                    </button>
+                                    <input class="header-search-input" type="search" aria-label="검색어">
+                                </div>
+
+                                <div class="gnb-r">
+                                    <a href="like.html" class="like" aria-label="찜 목록">
+                                        <img src="./img/like.svg" alt="아이콘">
+                                        <b class="like-count" data-like-count aria-live="polite">0</b>
+                                    </a>
+
+                                    <div class="user-dropdown">
+                                        <a href="login.html" class="user">
+                                            <img src="./img/user.svg" alt="유저">
+                                        </a>
+                                        <ul class="user-menu">
+                                            <li><a href="login.html">로그인</a></li>
+                                            <li><a href="login.html">회원가입</a></li>
+                                        </ul>
+                                    </div>
+
+                                    <a href="cart.html" class="cart" aria-label="장바구니">
+                                        <img src="./img/local_mall.svg" alt="아이콘">
+                                        <b class="cart-count" data-cart-count aria-live="polite">0</b>
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                </div>
+            </header>
+
+            <nav class="nav">
+                <ul>
+                    <li><a href="#">BEST</a>
+                        <ul class="subm">
+                            <li><a href="#">블라우스</a></li>
+                            <li><a href="#">팬츠</a></li>
+                            <li><a href="#">스커트</a></li>
+                            <li><a href="#">원피스</a></li>
+                            <li><a href="#">니트</a></li>
+                            <li><a href="#">아우터</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="#">NEW</a>
+                        <ul class="subm">
+                            <li><a href="#">블라우스</a></li>
+                            <li><a href="#">니트</a></li>
+                            <li><a href="#">아우터</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="#">MADE</a>
+                        <ul class="subm">
+                            <li><a href="#">셔츠</a></li>
+                            <li><a href="#">니트</a></li>
+                            <li><a href="#">아우터</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="#">SALE</a>
+                        <ul class="subm">
+                            <li><a href="#">데님</a></li>
+                            <li><a href="#">민소매</a></li>
+                            <li><a href="#">티셔츠</a></li>
+                            <li><a href="#">트레이닝</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="#">TOP</a>
+                        <ul class="subm">
+                            <li><a href="#">티셔츠</a></li>
+                            <li><a href="#">셔츠</a></li>
+                            <li><a href="#">블라우스</a></li>
+                            <li><a href="#">민소매</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="#">BOTTOM</a>
+                        <ul class="subm">
+                            <li><a href="#">슬랙스</a></li>
+                            <li><a href="#">데님</a></li>
+                            <li><a href="#">트레이닝</a></li>
+                            <li><a href="#">미니&롱</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="#"><span class="knit">KNIT</span></a>
+                        <ul class="subm">
+                            <li><a href="#">가디건</a></li>
+                            <li><a href="#">베스트</a></li>
+                            <li><a href="#">니트</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="#">OUTER</a>
+                        <ul class="subm">
+                            <li><a href="#">코트</a></li>
+                            <li><a href="#">자켓</a></li>
+                            <li><a href="#">패딩</a></li>
+                        </ul>
+                    </li>
+
+                </ul>
+            </nav>
+            <!-- //메인메뉴 -->
+
+        </nav>
+
+        </nav>
+
+            <main id="main">
+                <div id="sub-m">
+                    <a href="#">
+                        <img src="./img/Arrow.png" alt="맨 위로">
+                    </a>
+                    <br>
+                    <a href="https://open.kakao.com/o/sNT7nKQi">
+                        <img src="./img/chat.png" alt="카카오톡 채팅">
+                    </a>
+                </div>
+
+                <div class="breadcrumb">
+                    <a href="main.html">HOME</a>
+                    <span>&gt;</span>
+                    <a href="#">TOP</a>
+                    <span>&gt;</span>
+                    <span class="current">티셔츠</span>
+                </div>
+                <div class="detail-line01"></div>
+
+                <section class="product-detail" data-id="shirt-crop" data-brand="UNIQUEMENT"
+                    data-name="심볼 패치 크롭 반팔 티셔츠" data-old="65,000원" data-price="56,000원"
+                    data-img="./img/pdp01/c-sum01.jpg" data-link="pdp01.html" data-colors="#eac8d6,#ffffff">
+                    <div class="product-gallery">
+                        <div class="main-image">
+                            <img src="./img/pdp01/c-sum01.jpg" alt="제품 메인 이미지">
+                        </div>
+
+                        <div class="thumbnail-list">
+                            <img src="./img/pdp01/m-sum01.jpg" data-large="./img/pdp01/c-sum01.jpg" alt="썸네일 1" class="active">
+                            <img src="./img/pdp01/m-sum02.jpg" data-large="./img/pdp01/c-sum02.jpg" alt="썸네일 2">
+                            <img src="./img/pdp01/m-sum03.jpg" data-large="./img/pdp01/c-sum03.jpg" alt="썸네일 3">
+                        </div>
+                    </div>
+
+                    <div class="product-info">
+                        <h1 class="product-name">[UNIQUEMENT] 심볼 패치 크롭 반팔 티셔츠</h1>
+                        <div class="product-price">
+                            <div class="original">
+                                <span class="original-price01">소비자가</span>
+                                <span class="original-price02">65,000원</span>
+                            </div>
+
+                            <div class="sale">
+                                <span class="sale-price01">판매가</span>
+                                <span class="sale-price02">56,000원</span>
+                            </div>
+                        </div>
+
+                        <div class="product-tip">
+
+                            <div class="tip-row">
+                                <span class="tip-title">배송비</span>
+                                <div class="tip-value">
+                                    <span>3,000원</span>
+                                    <span class="sub-text">(5만원 이상 구매 시 무료배송)</span>
+                                </div>
+                            </div>
+
+                            <div class="tip-row">
+                                <span class="tip-title">구매 tip</span>
+                                <div class="tip-value">
+                                    <span>오후 2시 이전 주문 시 당일 출고</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="benefit">
+                        <button class="benefit__toggle" type="button" aria-expanded="false" aria-controls="benefit-panel">
+                            <span>최대 적립혜택</span>
+                            <svg class="benefit__arrow" width="16" height="16" viewBox="0 0 16 16" aria-hidden="true">
+                            <path d="M3 10l5-5 5 5" fill="none" stroke="currentColor" stroke-width="1.3"/>
+                            </svg>
+                        </button>
+
+                        <div class="benefit__panel" id="benefit-panel">
+                            <ul class="benefit__list">
+                                <li><span class="benefit__label">7만원 이상</span><span class="benefit__value">7만원 이상 구매 시 3,000원 할인</span></li>
+                                <li><span class="benefit__label">일반 리뷰</span><span class="benefit__value">일반 리뷰 작성 시 1,000원 적립</span></li>
+                                <li><span class="benefit__label">포토 리뷰</span><span class="benefit__value">포토 리뷰 작성 시 2,000원 적립</span></li>
+                                <li><span class="benefit__label">회원 가입</span><span class="benefit__value">신규 가입 즉시 사용 가능한 5% 할인쿠폰 지급</span></li>
+                            </ul>
+                        </div>
+                        </div>
+
+                        <div id="option-area" data-price="65000" data-name="[ORDINARY U] 타이 프론트 랩 블라우스">
+
+                        <!-- COLOR -->
+                        <div class="acc">
+                            <button class="acc__toggle" type="button" aria-expanded="false" aria-controls="acc-color">
+                            <span class="acc__label" data-default="COLOR">COLOR</span>
+                            <svg class="acc__arrow" width="16" height="16" viewBox="0 0 16 16" aria-hidden="true">
+                                <path d="M3 10l5-5 5 5" fill="none" stroke="currentColor" stroke-width="1.3"/>
+                            </svg>
+                            </button>
+                            <div class="acc__panel" id="acc-color">
+                            <ul class="acc__list">
+                                <li><label class="opt"><input type="radio" name="color" value="핑크"><span>핑크</span></label></li>
+                                <li><label class="opt"><input type="radio" name="color" value="화이트"><span>화이트</span></label></li>
+                            </ul>
+                            </div>
+                        </div>
+
+                        <!-- SIZE -->
+                        <div class="acc">
+                            <button class="acc__toggle" type="button" aria-expanded="false" aria-controls="acc-size">
+                            <span class="acc__label" data-default="SIZE">SIZE</span>
+                            <svg class="acc__arrow" width="16" height="16" viewBox="0 0 16 16" aria-hidden="true">
+                                <path d="M3 10l5-5 5 5" fill="none" stroke="currentColor" stroke-width="1.3"/>
+                            </svg>
+                            </button>
+                            <div class="acc__panel" id="acc-size">
+                            <ul class="acc__list">
+                                <li>
+                                    <label class="opt">
+                                        <input type="radio" name="size" value="FREE">
+                                        <span>FREE</span>
+                                    </label>
+
+                                </li>
+                            </ul>
+                            </div>
+                        </div>
+
+                        <p class="opt-msg" id="opt-msg" role="alert"></p>
+
+                        <!-- 선택된 상품 목록 -->
+                        <ul class="sel-list" id="sel-list"></ul>
+
+                        <div class="total">
+                            <span>총 상품금액 <small>(<b id="total-count">0</b>개)</small></span>
+                            <strong id="total-price">0원</strong>
+                        </div>
+                        </div>
+
+
+                        <div class="selected-options">
+                            <!-- 인터랙션 -->
+                        </div>
+
+                        <div class="product-actions">
+                            <button type="button" class="btn product-like like-btn" aria-label="찜하기"></button>
+                            <button class="btn btn-cart">장바구니 담기</button>
+                            <button type="button" class="btn btn-buy">바로 구매하기</button>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="product-description">
+                    <div class="description-tabs" role="tablist" aria-label="상품 상세 정보">
+                        <button class="tab-btn active" id="tab-detail" type="button" role="tab" aria-selected="true" aria-controls="panel-detail" tabindex="0">디테일</button>
+                        <button class="tab-btn" id="tab-size" type="button" role="tab" aria-selected="false" aria-controls="panel-size" tabindex="-1">사이즈</button>
+                        <button class="tab-btn" id="tab-review" type="button" role="tab" aria-selected="false" aria-controls="panel-review" tabindex="-1">리뷰</button>
+                        <button class="tab-btn" id="tab-qna" type="button" role="tab" aria-selected="false" aria-controls="panel-qna" tabindex="-1">Q&A</button>
+                    </div>
+
+                    <div class="description-content">
+                        <div class="tab-content active" id="panel-detail" role="tabpanel" aria-labelledby="tab-detail" tabindex="0">
+                            <img src="./img/pdp01/n-main01.jpg" alt="세부 상세페이지 이미지입니다.">
+                        </div>
+
+                        <div class="tab-content" id="panel-size" role="tabpanel" aria-labelledby="tab-size" tabindex="0">
+                            <img src="./img/pdp01/n-tee.size.jpg" alt="세부 상세페이지 이미지입니다.">
+                        </div>
+
+                        <div class="tab-content" id="panel-review" role="tabpanel" aria-labelledby="tab-review" tabindex="0">
+
+                            <div class="tab-content" id="panel-review" role="tabpanel" aria-labelledby="tab-review" tabindex="0">
+
+                                <!-- AI 리뷰 요약 -->
+                                <section class="rv-section" aria-label="AI 리뷰 요약">
+                                    <div class="rv-ai">
+                                        <p class="rv-ai-title">AI 리뷰 요약 <small>beta</small></p>
+                                        <p class="rv-ai-lead">부드럽고 따뜻한 착용감, 다양한 코디 가능!</p>
+                                        <p class="rv-ai-desc">부드러운 소재와 여유 있는 핏이 많은 리뷰에서 좋은 평가를 받았습니다.</p>
+                                        <ul class="rv-tags">
+                                            <li>#착용감</li>
+                                            <li>#소재</li>
+                                            <li>#핏</li>
+                                            <li>#색감</li>
+                                        </ul>
+                                    </div>
+                                </section>
+
+                                <!-- 포토 & 동영상 -->
+                                <section class="rv-section" aria-label="포토 및 동영상">
+                                    <div class="rv-head">
+                                        <h3 class="rv-title">포토&amp;동영상</h3>
+                                        <button type="button" class="rv-more">더보기</button>
+                                    </div>
+                                    <div class="rv-photos">
+                                        <div class="rv-photo">
+                                            <img src="./img/pdp01/r-sum01.jpg" alt="리뷰이미지 01">
+                                        </div>
+
+                                        <div class="rv-photo">
+                                            <img src="./img/pdp01/r-sum02.jpg" alt="리뷰이미지 01">
+                                        </div>
+
+                                        <div class="rv-photo">
+                                            <img src="./img/pdp01/r-sum03.jpg" alt="리뷰이미지 01">
+                                        </div>
+
+                                        <div class="rv-photo">
+                                            <img src="./img/pdp01/r-sum04.jpg" alt="리뷰이미지 01">
+                                        </div>
+
+                                    </div>
+                                </section>
+
+                                <!-- 상품옵션 필터 + 리뷰 목록 -->
+                                <section class="rv-section" aria-label="리뷰 목록">
+                                    <h3 class="rv-title" style="margin-bottom:14px;">상품옵션</h3>
+                                    <div class="rv-head">
+                                        <div class="rv-sort" role="group" aria-label="정렬">
+                                            <button type="button" data-sort="popular" aria-pressed="true">인기순</button>
+                                            <button type="button" data-sort="latest" aria-pressed="false">최신순</button>
+                                        </div>
+                                        <label class="rv-photoonly"><input type="checkbox" class="rv-photoonly-input">포토리뷰만 보기</label>
+                                    </div>
+                                    <div class="rv-selects">
+                                        <select class="rv-color" aria-label="색상"></select>
+                                        <select class="rv-size" aria-label="사이즈"></select>
+                                    </div>
+
+                                    <ul class="rv-list" style="margin-top:24px;"></ul>
+
+                                    <nav class="pagination" aria-label="리뷰 페이지 이동"></nav>
+                                </section>
+                            </div>
+
+                        </div>
+
+                        <div class="tab-content" id="panel-qna" role="tabpanel" aria-labelledby="tab-qna" tabindex="0">
+                            <div class="tab-content" id="panel-qna" role="tabpanel" aria-labelledby="tab-qna" tabindex="0">
+                                <div class="qna-list" role="table" aria-label="Q&A 목록">
+                                    <div class="qna-row is-head" role="row">
+                                        <span role="columnheader">번호</span>
+                                        <span role="columnheader">카테고리</span>
+                                        <span role="columnheader">내용</span>
+                                        <span class="qna-meta" role="columnheader"><span class="author">작성자</span><span>작성일</span></span>
+                                    </div>
+                                    <div class="qna-body" role="rowgroup"></div><!-- 행은 JS가 채웁니다 -->
+                                </div>
+
+                                <nav class="pagination" aria-label="Q&A 페이지 이동"></nav>
+                                    <div class="qna-modal" role="dialog" aria-modal="true" aria-label="비밀글 안내" hidden>
+                                        <div class="qna-modal-box">
+                                            <p>비밀글 접근 권한이 없습니다.<br>작성자 본인 계정으로 로그인 후 다시 시도해 주세요.</p>
+                                            <button type="button" class="qna-modal-close">확인</button>
+                                        </div>
+                                    </div>
+                            </div>
+                            <!-- Q&A -->
+
+                        </div>
+                    </div>
+                </section>
+            </main>
+
+            <footer id="footer">
+                <div class="footer-inner">
+                    <div class="footer-top">
+                        <div class="footer-brand">
+                            <img src="./img/logo.svg" alt="NURU 로고" loading="lazy">
+                            <p>Quiet essentials for daily rituals.</p>
+                        </div>
+                        <div class="footer-social" aria-label="소셜 링크">
+                            <a href="#">Instagram</a>
+                            <a href="#">KakaoTalk</a>
+                        </div>
+                    </div>
+
+                    <div class="footer-columns">
+                        <div class="footer-column">
+                            <h3>CUSTOMER CENTER</h3>
+                            <ul>
+                                <li>카카오톡 채널톡 (24시간 운영)</a></li>
+                                <li>상담시간 PM 09:00 - PM 18:00 (월-금)</a></li> 
+                                <li>토요일, 일요일, 공휴일 OFF</a></li> 
+                            </ul>
+                        </div>
+                        <div class="footer-column">
+                            <h3>RETURN ADRESS</h3>
+                            <ul>
+                                <li>서울특별시 성동구 연무장길 77, 3층 (성수동)</a></li>
+                                <li>택배를 접수하기 전 채널톡또는 전화로 접수를
+                                    우선적으로 부탁드립니다.</li>
+                            </ul>
+                        </div>
+                        <div class="footer-column">
+                            <h3>COMPANY PROFILE</h3>
+                            <ul>
+                                <li>상호명: (주) NURU</li>
+                                <li>사업장 주소: 서울특별시 성동구 연무장길 77, 3층 (성수동)</a></li>  
+                                <li>사업자 등록번호: 120-88-01924</li>  
+                                <li>통신판매업 신고: 제 2026-서울성동-0123 호</li>  
+                                <li>대표번호: 02-555-2783</li>  
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+
+
+        <script src="jquery/jquery-1.12.3.js"></script>
+        <script src="jquery/jquery.js"></script>
+        <script src="jquery/header-search.js"></script>
+        <script>
+            $(function(){
+                // Top banner text rotation
+                let bannerTexts = $('.banner-text');
+                let currentBannerIndex = 0;
+
+                function rotateBanner() {
+                    bannerTexts.removeClass('active');
+                    bannerTexts.eq(currentBannerIndex).addClass('active');
+                    currentBannerIndex = (currentBannerIndex + 1) % bannerTexts.length;
+                }
+
+                if (bannerTexts.length > 0) {
+                    rotateBanner();
+                    setInterval(rotateBanner, 3000);
+                }
+
+                // Header scroll effect
+                let header = $('#header');
+                let topBanner = $('#top-banner');
+                let topBannerHeight = topBanner.length > 0 ? topBanner.outerHeight() : 0;
+
+                if (topBanner.length > 0) {
+                    $(window).on('scroll', function() {
+                        if ($(this).scrollTop() >= topBannerHeight) {
+                            header.addClass('fixed');
+                        } else {
+                            header.removeClass('fixed');
+                        }
+                    });
+                }
+
+                const tabs = Array.from(document.querySelectorAll('.tab-btn'));
+                const panels = Array.from(document.querySelectorAll('.tab-content'));
+
+                function activateTab(tab, moveFocus) {
+                    tabs.forEach(function(item) {
+                        const isActive = item === tab;
+                        item.classList.toggle('active', isActive);
+                        item.setAttribute('aria-selected', String(isActive));
+                        item.tabIndex = isActive ? 0 : -1;
+                    });
+
+                    panels.forEach(function(panel) {
+                        const isActive = panel.id === tab.getAttribute('aria-controls');
+                        panel.classList.toggle('active', isActive);
+                        panel.hidden = !isActive;
+                    });
+
+                    if (moveFocus) {
+                        tab.focus();
+                    }
+                }
+
+                tabs.forEach(function(tab, index) {
+                    tab.addEventListener('click', function() {
+                        activateTab(tab, false);
+                    });
+
+                    tab.addEventListener('keydown', function(event) {
+                        let nextIndex = index;
+                        if (event.key === 'ArrowRight') {
+                            nextIndex = (index + 1) % tabs.length;
+                        } else if (event.key === 'ArrowLeft') {
+                            nextIndex = (index - 1 + tabs.length) % tabs.length;
+                        } else if (event.key === 'Home') {
+                            nextIndex = 0;
+                        } else if (event.key === 'End') {
+                            nextIndex = tabs.length - 1;
+                        } else {
+                            return;
+                        }
+
+                        event.preventDefault();
+                        activateTab(tabs[nextIndex], true);
+                    });
+                });
+
+                const activeTab = tabs.find(function(tab) {
+                    return tab.classList.contains('active');
+                });
+                if (activeTab) {
+                    activateTab(activeTab, false);
+                }
+
+            });
+        </script>
+        <script src="jquery/like.js"></script>
+        <script src="jquery/cart.js"></script>
+    </body>
+    </html>
