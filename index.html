@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NURU</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/wishlist-dialog.css">
+    <script src="jquery/jquery-1.12.3.js"></script>
+    <script src="jquery/main.js"></script>
+    <script src="jquery/header-search.js"></script>
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div id="top-banner">
+        <div class="banner-content">
+            <span class="banner-text active">NURU 회원가입 시 10% 할인쿠폰 지급</span>
+            <span class="banner-text">3만원 이상 구매 시 무료배송</span>
+            <span class="banner-text">신규 회원 첫 구매 5% 추가 적립</span>
+        </div>
+    </div>
+    <div id="wrap">
+        <header id="header">
+            <div class="gnb">
+
+                    <div class="logo">
+                        <a href="#">
+                            <img src="./img/logo.svg" alt="느루 로고 이미지입니다.">
+                        </a>
+                    </div>
+
+                    <ul class="icon-gnb">
+                        <li>
+                            <div class="header-search">
+                                <button class="search-toggle" type="button" aria-label="검색창 열기">
+                                    <img src="./img/search.png" alt="아이콘">
+                                </button>
+                                <input class="header-search-input" type="search" aria-label="검색어">
+                            </div>
+
+                            <div class="gnb-r">
+                                <a href="like.html" class="like" aria-label="찜 목록">
+                                    <img src="./img/like.svg" alt="아이콘">
+                                    <b class="like-count" data-like-count aria-live="polite">0</b>
+                                </a>
+
+                                <div class="user-dropdown">
+                                    <a href="login.html" class="user">
+                                        <img src="./img/user.svg" alt="유저">
+                                    </a>
+                                    <ul class="user-menu">
+                                        <li><a href="login.html">로그인</a></li>
+                                        <li><a href="login.html">회원가입</a></li>
+                                    </ul>
+                                </div>
+
+                                <a href="cart.html" class="cart" aria-label="장바구니">
+                                    <img src="./img/local_mall.svg" alt="아이콘">
+                                    <b class="cart-count" data-cart-count aria-live="polite">0</b>
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                    <!-- //아이콘 -->
+
+            </div>
+            
+            <nav class="nav">
+                <ul>
+                    <li><a href="#">BEST</a>
+                        <ul class="subm">
+                            <li><a href="#">블라우스</a></li>
+                            <li><a href="#">팬츠</a></li>
+                            <li><a href="#">스커트</a></li>
+                            <li><a href="#">원피스</a></li>
+                            <li><a href="#">니트</a></li>
+                            <li><a href="#">아우터</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="#">NEW</a>
+                        <ul class="subm">
+                            <li><a href="#">블라우스</a></li>
+                            <li><a href="#">니트</a></li>
+                            <li><a href="#">아우터</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="#">MADE</a>
+                        <ul class="subm">
+                            <li><a href="#">셔츠</a></li>
+                            <li><a href="#">니트</a></li>
+                            <li><a href="#">아우터</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="#">SALE</a>
+                        <ul class="subm">
+                            <li><a href="#">데님</a></li>
+                            <li><a href="#">민소매</a></li>
+                            <li><a href="#">티셔츠</a></li>
+                            <li><a href="#">트레이닝</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="#">TOP</a>
+                        <ul class="subm">
+                            <li><a href="#">티셔츠</a></li>
+                            <li><a href="#">셔츠</a></li>
+                            <li><a href="#">블라우스</a></li>
+                            <li><a href="#">민소매</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="#">BOTTOM</a>
+                        <ul class="subm">
+                            <li><a href="#">슬랙스</a></li>
+                            <li><a href="#">데님</a></li>
+                            <li><a href="#">트레이닝</a></li>
+                            <li><a href="#">미니&롱</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="#"><span class="knit">KNIT</span></a>
+                        <ul class="subm">
+                            <li><a href="#">가디건</a></li>
+                            <li><a href="#">베스트</a></li>
+                            <li><a href="#">니트</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="#">OUTER</a>
+                        <ul class="subm">
+                            <li><a href="#">코트</a></li>
+                            <li><a href="#">자켓</a></li>
+                            <li><a href="#">패딩</a></li>
+                        </ul>
+                    </li>
+
+                </ul>
+            </nav>
+            <!-- //메인메뉴 -->
+        
+        </header>
+        <!-- //100% -->
+
+        <div id="slider" aria-label="메인 배너">
+            <div class="sliderwrap">
+                <div class="slider-track">
+                    <div class="slider-slide is-active" aria-hidden="false">
+                        <img src="./img/main_banner_01.jpg" alt="느루 큐레이티드 아카이브 배너">
+                    </div>
+                    <div class="slider-slide slider-slide--portrait" aria-hidden="true">
+                        <img src="./img/main_banner_02.jpg" alt="느루 스타일 배너">
+                    </div>
+                    <div class="slider-slide" aria-hidden="true">
+                        <img src="./img/main_banner_03.jpg" alt="느루 큐레이티드 아카이브 배너">
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="slider-arrow slider-prev" aria-label="이전 배너">‹</button>
+            <button type="button" class="slider-arrow slider-next" aria-label="다음 배너">›</button>
+             
+            <div class="slider-pagination" aria-label="배너 선택">
+                <button type="button" class="slider-dot is-active" aria-label="1번 배너" aria-pressed="true"></button>
+                <button type="button" class="slider-dot" aria-label="2번 배너" aria-pressed="false"></button>
+                <button type="button" class="slider-dot" aria-label="3번 배너" aria-pressed="false"></button>
+            </div>
+        </div>
+
+        <main id="main">
+            <div id="sub-m">
+                <a href="#">
+                    <img src="./img/Arrow.png" alt="아">
+                </a>
+                <br>
+                <a href="https://open.kakao.com/o/sNT7nKQi">
+                    <img src="./img/chat.png" alt="아">
+                </a>
+                
+            </div>
+            <!-- //sub -->
+
+            <section id="contents-1">
+                <h1>
+                    <p class="tagline-rotator">
+                        <span class="typing-line">Slowly and leisurely through the busy routine,<br>gently filling your space like a quiet warmth.</span>
+                    </p>
+                </h1>
+                <!-- //메인제목 -->
+
+                <section id="curated">
+                    <h1>
+                        <span>
+                            CURATED
+                        </span>
+                    </h1>
+
+                    <section class="title-curated">
+                        <h2>
+                            <button type="button" class="active">NEW</button>
+                            <button type="button">BEST</button>
+                            <button type="button">POPULAR</button>
+                        </h2>
+                    </section>
+
+                    <div class="curated-contents">
+                        <div class="NEW">
+                            <ul>
+                                <li data-id="shirt-crop" data-brand="UNIQUEMENT" data-name="심볼 패치 크롭 반팔 티셔츠" data-old="65,000원" data-price="56,000원" data-img="./img/pdp01/c-sum01.jpg" data-link="pdp01.html" data-colors="#eac8d6,#ffffff">
+                                    <a href="pdp01.html" class="c-sum">
+                                        <img src="./img/pdp01/c-sum01.jpg" alt="썸네일이미지">
+                                    </a>
+
+                                    <button type="button" class="c-like like-btn"></button>
+
+                                    <br>
+
+                                    <div class="color-swatches" aria-label="상품 색상">
+                                        <span class="color-chip" data-color="1" style="background-color: #eac8d6" title="컬러 1"></span>
+                                        <span class="color-chip" data-color="2" style="background-color: #ffffff" title="컬러 2"></span>
+                                    </div>
+                                    <!-- //컬러칩셋 -->
+
+                                    <span>심볼 패치 크롭 반팔 티셔츠</span>
+                                    <br>
+                                    <span class="s-before">65,000원</span>
+                                    <!-- //세일전 -->
+
+                                    <span class="s-after">56,000원</span>
+                                    <!-- //세일후 -->
+
+                                </li>
+
+                                <li data-id="vintage-jacket" data-brand="UNIQUEMENT" data-name="빈티지 워싱 코튼 오버핏 자켓" data-old="49,000원" data-price="39,000원" data-img="./img/pdp02/c-sum01.jpg" data-link="pdp02.html" data-colors="#2B3646,#6F6861">
+                                    <a href="pdp02.html" class="c-sum">
+                                        <img src="./img/pdp02/c-sum01.jpg" alt="썸네일이미지">
+                                    </a>
+
+                                    <button type="button" class="c-like like-btn"></button>
+
+                                    <br>
+
+                                    <div class="color-swatches" aria-label="상품 색상">
+                                        <span class="color-chip" data-color="1" style="background-color: #2B3646" title="컬러 1"></span>
+                                        <span class="color-chip" data-color="2" style="background-color: #6F6861" title="컬러 2"></span>
+                                    </div>
+                                    <!-- //컬러칩셋 -->
+
+                                    <span>빈티지 워싱 코튼 오버핏 자켓</span>
+                                    <br>
+                                    <span class="s-before">49,000원</span>
+                                    <!-- //세일전 -->
+
+                                    <span class="s-after">39,000원</span>
+                                    <!-- //세일후 -->
+
+                                </li>
+
+                                <li data-id="leather-jacket" data-brand="UNIQUEMENT" data-name="루즈핏 빈티지 레더 자켓" data-old="142,000원" data-price="119,000원" data-img="./img/sum03.jpg" data-link="#" data-colors="#000000">
+                                    <a href="#" class="c-sum">
+                                        <img src="./img/sum03.jpg" alt="">
+                                    </a>
+
+                                    <button type="button" class="c-like like-btn"></button>
+
+                                    <br>
+
+                                    <div class="color-swatches" aria-label="상품 색상">
+                                        <span class="color-chip" data-color="1" style="background-color: #000000" title="컬러 1"></span>
+                                    </div>
+                                    <!-- //컬러칩셋 -->
+
+                                    <span>루즈핏 빈티지 레더 자켓</span>
+                                    <br>
+                                    <span class="s-before">142,000원</span>
+                                    <!-- //세일전 -->
+
+                                    <span class="s-after">119,000원</span>
+                                    <!-- //세일후 -->
+
+                                </li>
+
+                                <li data-id="denim-padding" data-brand="UNIQUEMENT" data-name="무드 데님 믹스 패딩 자켓" data-old="128,000원" data-price="109,000원" data-img="./img/sum04.jpg" data-link="#" data-colors="#CFD8C9,#7A756F,#6A8270,#403A3D">
+                                    <a href="#" class="c-sum">
+                                        <img src="./img/sum04.jpg" alt="">
+                                    </a>
+
+                                    <button type="button" class="c-like like-btn"></button>
+
+                                    <br>
+
+                                    <div class="color-swatches" aria-label="상품 색상">
+                                        <span class="color-chip" data-color="1" style="background-color: #CFD8C9" title="컬러 1"></span>
+                                        <span class="color-chip" data-color="2" style="background-color: #7A756F" title="컬러 2"></span>
+                                        <span class="color-chip" data-color="3" style="background-color: #6A8270" title="컬러 3"></span>
+                                        <span class="color-chip" data-color="4" style="background-color: #403A3D" title="컬러 4"></span>
+                                    </div>
+                                    <!-- //컬러칩셋 -->
+
+                                    <span>무드 데님 믹스 패딩 자켓</span>
+                                    <br>
+                                    <span class="s-before">128,000원</span>
+                                    <!-- //세일전 -->
+
+                                    <span class="s-after">109,000원</span>
+                                    <!-- //세일후 -->
+
+                                </li>
+
+
+                            </ul>
+                             
+                        </div>
+                        <!-- //NEW -->
+                         
+
+                        <div class="BEST">
+                            <div class="BEST">
+                            <ul>
+                                <li data-id="denim-padding" data-brand="UNIQUEMENT" data-name="무드 데님 믹스 패딩 자켓" data-old="128,000원" data-price="109,000원" data-img="./img/sum01.jpg" data-link="#" data-colors="#E6E6E6,#6F7A72,#697883,#343434">
+                                    <a href="#" class="c-sum">
+                                        <img src="./img/sum01.jpg" alt="">
+                                    </a>
+
+                                    <button type="button" class="c-like like-btn"></button>
+
+                                    <br>
+
+                                    <div class="color-swatches" aria-label="상품 색상">
+                                        <span class="color-chip" data-color="1" style="background-color: #E6E6E6" title="컬러 1"></span>
+                                        <span class="color-chip" data-color="2" style="background-color: #6F7A72" title="컬러 2"></span>
+                                        <span class="color-chip" data-color="3" style="background-color: #697883" title="컬러 3"></span>
+                                        <span class="color-chip" data-color="4" style="background-color: #343434" title="컬러 4"></span>
+                                    </div>
+                                    <!-- //컬러칩셋 -->
+
+                                    <span>무드 데님 믹스 패딩 자켓</span>
+                                    <br>
+                                    <span class="s-before">128,000원</span>
+                                    <!-- //세일전 -->
+
+                                    <span class="s-after">109,000원</span>
+                                    <!-- //세일후 -->
+
+                                </li>
+
+                                <li data-id="tweed-jacket" data-brand="UNIQUEMENT" data-name="클래식 트위드 싱글 자켓" data-old="98,000원" data-price="84,000원" data-img="./img/sum02.jpg" data-link="#" data-colors="#EAE2DF,#554435,#373737">
+                                    <a href="#" class="c-sum">
+                                        <img src="./img/sum02.jpg" alt="">
+                                    </a>
+
+                                    <button type="button" class="c-like like-btn"></button>
+
+                                    <br>
+
+                                    <div class="color-swatches" aria-label="상품 색상">
+                                        <span class="color-chip" data-color="1" style="background-color: #EAE2DF" title="컬러 1"></span>
+                                        <span class="color-chip" data-color="2" style="background-color: #554435" title="컬러 2"></span>
+                                        <span class="color-chip" data-color="3" style="background-color: #373737" title="컬러 3"></span>
+                                    </div>
+                                    <!-- //컬러칩셋 -->
+
+                                    <span>클래식 트위드 싱글 자켓</span>
+                                    <br>
+                                    <span class="s-before">98,000원</span>
+                                    <!-- //세일전 -->
+
+                                    <span class="s-after">84,000원</span>
+                                    <!-- //세일후 -->
+
+                                </li>
+
+                                <li data-id="leather-jacket" data-brand="UNIQUEMENT" data-name="루즈핏 빈티지 레더 자켓" data-old="142,000원" data-price="119,000원" data-img="./img/sum03.jpg" data-link="#" data-colors="#000000">
+                                    <a href="#" class="c-sum">
+                                        <img src="./img/sum03.jpg" alt="">
+                                    </a>
+
+                                    <button type="button" class="c-like like-btn"></button>
+
+                                    <br>
+
+                                    <div class="color-swatches" aria-label="상품 색상">
+                                        <span class="color-chip" data-color="1" style="background-color: #000000" title="컬러 1"></span>
+                                    </div>
+                                    <!-- //컬러칩셋 -->
+
+                                    <span>루즈핏 빈티지 레더 자켓</span>
+                                    <br>
+                                    <span class="s-before">142,000원</span>
+                                    <!-- //세일전 -->
+
+                                    <span class="s-after">119,000원</span>
+                                    <!-- //세일후 -->
+
+                                </li>
+
+                                <li data-id="denim-padding" data-brand="UNIQUEMENT" data-name="무드 데님 믹스 패딩 자켓" data-old="128,000원" data-price="109,000원" data-img="./img/sum04.jpg" data-link="#" data-colors="#CFD8C9,#7A756F,#6A8270,#403A3D">
+                                    <a href="#" class="c-sum">
+                                        <img src="./img/sum04.jpg" alt="">
+                                    </a>
+
+                                    <button type="button" class="c-like like-btn"></button>
+
+                                    <br>
+
+                                    <div class="color-swatches" aria-label="상품 색상">
+                                        <span class="color-chip" data-color="1" style="background-color: #CFD8C9" title="컬러 1"></span>
+                                        <span class="color-chip" data-color="2" style="background-color: #7A756F" title="컬러 2"></span>
+                                        <span class="color-chip" data-color="3" style="background-color: #6A8270" title="컬러 3"></span>
+                                        <span class="color-chip" data-color="4" style="background-color: #403A3D" title="컬러 4"></span>
+                                    </div>
+                                    <!-- //컬러칩셋 -->
+
+                                    <span>무드 데님 믹스 패딩 자켓</span>
+                                    <br>
+                                    <span class="s-before">128,000원</span>
+                                    <!-- //세일전 -->
+
+                                    <span class="s-after">109,000원</span>
+                                    <!-- //세일후 -->
+
+                                </li>
+
+
+                            </ul>
+                             
+                        </div>
+                        <!-- //BEST -->
+
+                        </div>
+                        <div class="POPULAR">
+                            <div class="POPULAR">
+                            <ul>
+                                <li data-id="denim-padding" data-brand="UNIQUEMENT" data-name="무드 데님 믹스 패딩 자켓" data-old="128,000원" data-price="109,000원" data-img="./img/sum01.jpg" data-link="#" data-colors="#E6E6E6,#6F7A72,#697883,#343434">
+                                    <a href="#" class="c-sum">
+                                        <img src="./img/sum01.jpg" alt="">
+                                    </a>
+
+                                    <button type="button" class="c-like like-btn"></button>
+
+                                    <br>
+
+                                    <div class="color-swatches" aria-label="상품 색상">
+                                        <span class="color-chip" data-color="1" style="background-color: #E6E6E6" title="컬러 1"></span>
+                                        <span class="color-chip" data-color="2" style="background-color: #6F7A72" title="컬러 2"></span>
+                                        <span class="color-chip" data-color="3" style="background-color: #697883" title="컬러 3"></span>
+                                        <span class="color-chip" data-color="4" style="background-color: #343434" title="컬러 4"></span>
+                                    </div>
+                                    <!-- //컬러칩셋 -->
+
+                                    <span>무드 데님 믹스 패딩 자켓</span>
+                                    <br>
+                                    <span class="s-before">128,000원</span>
+                                    <!-- //세일전 -->
+
+                                    <span class="s-after">109,000원</span>
+                                    <!-- //세일후 -->
+
+                                </li>
+
+                                <li data-id="tweed-jacket" data-brand="UNIQUEMENT" data-name="클래식 트위드 싱글 자켓" data-old="98,000원" data-price="84,000원" data-img="./img/sum02.jpg" data-link="#" data-colors="#EAE2DF,#554435,#373737">
+                                    <a href="#" class="c-sum">
+                                        <img src="./img/sum02.jpg" alt="">
+                                    </a>
+
+                                    <button type="button" class="c-like like-btn"></button>
+
+                                    <br>
+
+                                    <div class="color-swatches" aria-label="상품 색상">
+                                        <span class="color-chip" data-color="1" style="background-color: #EAE2DF" title="컬러 1"></span>
+                                        <span class="color-chip" data-color="2" style="background-color: #554435" title="컬러 2"></span>
+                                        <span class="color-chip" data-color="3" style="background-color: #373737" title="컬러 3"></span>
+                                    </div>
+                                    <!-- //컬러칩셋 -->
+
+                                    <span>클래식 트위드 싱글 자켓</span>
+                                    <br>
+                                    <span class="s-before">98,000원</span>
+                                    <!-- //세일전 -->
+
+                                    <span class="s-after">84,000원</span>
+                                    <!-- //세일후 -->
+
+                                </li>
+
+                                <li data-id="leather-jacket" data-brand="UNIQUEMENT" data-name="루즈핏 빈티지 레더 자켓" data-old="142,000원" data-price="119,000원" data-img="./img/sum03.jpg" data-link="#" data-colors="#000000">
+                                    <a href="#" class="c-sum">
+                                        <img src="./img/sum03.jpg" alt="">
+                                    </a>
+
+                                    <button type="button" class="c-like like-btn"></button>
+
+                                    <br>
+
+                                    <div class="color-swatches" aria-label="상품 색상">
+                                        <span class="color-chip" data-color="1" style="background-color: #000000" title="컬러 1"></span>
+                                    </div>
+                                    <!-- //컬러칩셋 -->
+
+                                    <span>루즈핏 빈티지 레더 자켓</span>
+                                    <br>
+                                    <span class="s-before">142,000원</span>
+                                    <!-- //세일전 -->
+
+                                    <span class="s-after">119,000원</span>
+                                    <!-- //세일후 -->
+
+                                </li>
+
+                                <li data-id="denim-padding" data-brand="UNIQUEMENT" data-name="무드 데님 믹스 패딩 자켓" data-old="128,000원" data-price="109,000원" data-img="./img/sum04.jpg" data-link="#" data-colors="#CFD8C9,#7A756F,#6A8270,#403A3D">
+                                    <a href="#" class="c-sum">
+                                        <img src="./img/sum04.jpg" alt="">
+                                    </a>
+
+                                    <button type="button" class="c-like like-btn"></button>
+
+                                    <br>
+
+                                    <div class="color-swatches" aria-label="상품 색상">
+                                        <span class="color-chip" data-color="1" style="background-color: #CFD8C9" title="컬러 1"></span>
+                                        <span class="color-chip" data-color="2" style="background-color: #7A756F" title="컬러 2"></span>
+                                        <span class="color-chip" data-color="3" style="background-color: #6A8270" title="컬러 3"></span>
+                                        <span class="color-chip" data-color="4" style="background-color: #403A3D" title="컬러 4"></span>
+                                    </div>
+                                    <!-- //컬러칩셋 -->
+
+                                    <span>무드 데님 믹스 패딩 자켓</span>
+                                    <br>
+                                    <span class="s-before">128,000원</span>
+                                    <!-- //세일전 -->
+
+                                    <span class="s-after">109,000원</span>
+                                    <!-- //세일후 -->
+
+                                </li>
+
+
+                            </ul>
+                             
+                        </div>
+                        <!-- //POPULAR -->
+
+                        </div>
+
+
+                    </div>
+
+
+
+
+                </section>
+
+
+            </section>
+            <section id="contents-2" aria-label="카테고리별 상품">
+
+                <section class="category-row" aria-labelledby="tops-title">
+                    <header class="lower-section-heading">
+                        <h2 id="tops-title">TOP &amp; TEE</h2>
+                        <button type="button">더보기</button>
+                    </header>
+                    <ul class="catalog-grid" aria-label="TOP &amp; TEE 상품"></ul>
+                </section>
+                <!-- //탑&티 -->
+
+                <!-- <section class="category-row" aria-labelledby="knitwear-title">
+                    <header class="lower-section-heading">
+                        <h2 id="knitwear-title">KNITWEAR</h2>
+                        <button type="button">더보기</button>
+                    </header>
+                    <ul class="catalog-grid" aria-label="KNITWEAR 상품"></ul>
+                </section> -->
+                <!-- //키워드는 3가지로 유지 -->
+
+                <section class="category-row" aria-labelledby="skirt-title">
+                    <header class="lower-section-heading">
+                        <h2 id="skirt-title">SKIRT</h2>
+                        <button type="button">더보기</button>
+                    </header>
+                    <ul class="catalog-grid" aria-label="SKIRT 상품"></ul>
+                </section>
+                <!-- //스커트 -->
+
+                <section class="category-row" aria-labelledby="outer-title">
+                    <header class="lower-section-heading">
+                        <h2 id="outer-title">OUTER</h2>
+                        <button type="button">더보기</button>
+                    </header>
+                    <ul class="catalog-grid" aria-label="OUTER 상품"></ul>
+                    <div class="category-more-wrap">
+                        <button type="button" class="category-more">더보기</button>
+                    </div>
+                </section>
+                <!-- //아우터 -->
+
+            </section>
+            <section id="contents-3" aria-labelledby="lookbook-title">
+                <header class="lower-section-heading lookbook-heading">
+                    <div>
+                        <h2 id="lookbook-title">LOOKBOOK</h2>
+                        <div class="lookbook-tabs" role="group" aria-label="룩북 분류">
+                            <button type="button" class="active" data-lookbook-tab="md-pick" aria-pressed="true">MD PICK</button>
+                            <button type="button" data-lookbook-tab="weekly" aria-pressed="false">WEEKLY</button>
+                            <button type="button" data-lookbook-tab="vibe" aria-pressed="false">VIBE</button>
+                        </div>
+                    </div>
+                </header>
+                <div class="lookbook-layout">
+                    <a class="lookbook-feature" href="#">
+                        <img src="./img/main_banner.jpg" alt="느루 룩북 메인 스타일" loading="lazy">
+                        <span class="lookbook-heart" aria-hidden="true">♡</span>
+                    </a>
+                    <div class="lookbook-editor">
+                        <div class="lookbook-copy">
+                            <p>EDITOR'S NOTE</p>
+                            <p class="lookbook-note">일상을 물들이는 무드, 가볍게 걸치는 오늘의 일상</p>
+                        </div>
+                        <div class="lookbook-viewport">
+                            <div class="lookbook-track"></div>
+                        </div>
+                        <div class="lookbook-pagination" aria-label="룩북 페이지">
+                            <button type="button" class="lookbook-prev" aria-label="이전 룩북">‹</button>
+                            <span class="lookbook-page">1 / 4</span>
+                            <button type="button" class="lookbook-next" aria-label="다음 룩북">›</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="contents-4" aria-labelledby="review-title">
+                <header class="lower-section-heading">
+                    <h2 id="review-title">REVIEW</h2>
+                    <button type="button">더보기</button>
+                </header>
+                <div class="review-carousel">
+                    <div class="review-viewport">
+                        <div class="review-grid">
+                            <article class="review-item">
+                                <div class="review-photo"><img src="./img/sum01.jpg" alt="고객 착용 후기" loading="lazy"></div>
+                                <div class="review-details">
+                                    <div class="review-copy">
+                                        <p class="review-brand">스타일 BY CLOVERD</p>
+                                        <p class="review-title">가볍게 걸치기 좋아요</p>
+                                        <p class="review-excerpt">핏이 편안하고 어디에나 잘 어울려요.</p>
+                                    </div>
+                                    <div class="review-products" aria-label="관련 상품">
+                                        <img src="./img/sum02.jpg" alt="관련 상품" loading="lazy">
+                                        <img src="./img/sum03.jpg" alt="관련 상품" loading="lazy">
+                                        <img src="./img/sum04.jpg" alt="관련 상품" loading="lazy">
+                                        <span>+2</span>
+                                    </div>
+                                </div>
+                                <div class="review-meta"><time datetime="2026-05-12">26.05.12</time><span class="review-stars">★★★★★</span></div>
+                            </article>
+                            <article class="review-item">
+                                <div class="review-photo"><img src="./img/sum02.jpg" alt="고객 착용 후기" loading="lazy"></div>
+                                <div class="review-details">
+                                    <div class="review-copy">
+                                        <p class="review-brand">스타일 BY CLOVERD</p>
+                                        <p class="review-title">가볍게 걸치기 좋아요</p>
+                                        <p class="review-excerpt">도톰한 소재라 간절기에 입기 좋습니다.</p>
+                                    </div>
+                                    <div class="review-products" aria-label="관련 상품">
+                                        <img src="./img/sum01.jpg" alt="관련 상품" loading="lazy">
+                                        <img src="./img/sum03.jpg" alt="관련 상품" loading="lazy">
+                                        <img src="./img/sum04.jpg" alt="관련 상품" loading="lazy">
+                                        <span>+2</span>
+                                    </div>
+                                </div>
+                                <div class="review-meta"><time datetime="2026-05-12">26.05.12</time><span class="review-stars">★★★★★</span></div>
+                            </article>
+                            <article class="review-item">
+                                <div class="review-photo"><img src="./img/sum03.jpg" alt="고객 착용 후기" loading="lazy"></div>
+                                <div class="review-details">
+                                    <div class="review-copy">
+                                        <p class="review-brand">스타일 BY CLOVERD</p>
+                                        <p class="review-title">색감이 정말 마음에 들어요</p>
+                                        <p class="review-excerpt">사진과 같은 색이라 만족스럽습니다.</p>
+                                    </div>
+                                    <div class="review-products" aria-label="관련 상품">
+                                        <img src="./img/sum01.jpg" alt="관련 상품" loading="lazy">
+                                        <img src="./img/sum02.jpg" alt="관련 상품" loading="lazy">
+                                        <img src="./img/sum04.jpg" alt="관련 상품" loading="lazy">
+                                        <span>+2</span>
+                                    </div>
+                                </div>
+                                <div class="review-meta"><time datetime="2026-05-12">26.05.12</time><span class="review-stars">★★★★★</span></div>
+                            </article>
+                            <article class="review-item">
+                                <div class="review-photo"><img src="./img/sum04.jpg" alt="고객 착용 후기" loading="lazy"></div>
+                                <div class="review-details">
+                                    <div class="review-copy">
+                                        <p class="review-brand">스타일 BY CLOVERD</p>
+                                        <p class="review-title">핏이 예쁘고 활용도 높아요</p>
+                                        <p class="review-excerpt">여러 계절에 두루 입을 수 있어요.</p>
+                                    </div>
+                                    <div class="review-products" aria-label="관련 상품">
+                                        <img src="./img/sum01.jpg" alt="관련 상품" loading="lazy">
+                                        <img src="./img/sum02.jpg" alt="관련 상품" loading="lazy">
+                                        <img src="./img/sum03.jpg" alt="관련 상품" loading="lazy">
+                                        <span>+2</span>
+                                    </div>
+                                </div>
+                                <div class="review-meta"><time datetime="2026-05-12">26.05.12</time><span class="review-stars">★★★★★</span></div>
+                            </article>
+                        </div>
+                    </div>
+                    <div class="review-more-wrap">
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer id="footer">
+            <div class="footer-inner">
+                <div class="footer-top">
+                    <div class="footer-brand">
+                        <img src="./img/logo.svg" alt="NURU 로고" loading="lazy">
+                        <p>Quiet essentials for daily rituals.</p>
+                    </div>
+                    <div class="footer-social" aria-label="소셜 링크">
+                        <a href="#">Instagram</a>
+                        <a href="#">KakaoTalk</a>
+                    </div>
+                </div>
+
+                <div class="footer-columns">
+                    <div class="footer-column">
+                        <h3>CUSTOMER CENTER</h3>
+                        <ul>
+                            <li>카카오톡 채널톡 (24시간 운영)</a></li>
+                            <li>상담시간 PM 09:00 - PM 18:00 (월-금)</a></li> 
+                            <li>토요일, 일요일, 공휴일 OFF</a></li> 
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>RETURN ADRESS</h3>
+                        <ul>
+                            <li>서울특별시 성동구 연무장길 77, 3층 (성수동)</a></li>
+                            <li>택배를 접수하기 전 채널톡또는 전화로 접수를
+                                우선적으로 부탁드립니다.</li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>COMPANY PROFILE</h3>
+                        <ul>
+                            <li>상호명: (주) NURU</li>
+                            <li>사업장 주소: 서울특별시 성동구 연무장길 77, 3층 (성수동)</li>  
+                            <li>사업자 등록번호: 120-88-01924</li>  
+                            <li>통신판매업 신고: 제 2026-서울성동-0123 호</li>  
+                            <li>대표번호: 02-555-2783</li>  
+                        </ul>
+                    </div>
+
+                </div>
+                <!-- //footer-columns -->
+
+            </div>
+        </footer>
+
+    </div>
+    <!-- //wrap -->
+    <script src="jquery/like.js"></script>
+    <script src="jquery/cart.js"></script>
+    <script src="jquery/search-modal.js"></script>
+</body>
+</html>

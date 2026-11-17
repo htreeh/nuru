@@ -1,0 +1,284 @@
+    <!DOCTYPE html>
+    <html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>NURU - 주문 및 결제</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="./css/cart.css">
+        <link rel="stylesheet" href="./css/payment.css">
+    </head>
+    <body>
+        <header class="site-header">
+            <div class="header-top">
+                <a href="index.html" class="logo"><img src="./img/logo.svg" alt="느루 로고 이미지입니다."></a>
+                <div class="header-tools">
+                    <img src="./img/search.png" alt="검색">
+                    <input type="search" placeholder="검색어를 입력해주세요." aria-label="검색어">
+                    <a href="like.html" class="like" aria-label="찜 목록">
+                        <img src="./img/like.svg" alt="아이콘">
+                        <b class="like-count" data-like-count aria-live="polite">0</b>
+                    </a>
+                    <a href="cart.html" class="cart" aria-label="장바구니">
+                        <img src="./img/local_mall.svg" alt="아이콘">
+                        <b class="cart-count" data-cart-count aria-live="polite">0</b>
+                    </a>
+                </div>
+            </div>
+            
+            <nav class="nav">
+                <ul>
+                    <li><a href="#">BEST</a>
+                        <ul class="subm">
+                            <li><a href="#">블라우스</a></li>
+                            <li><a href="#">팬츠</a></li>
+                            <li><a href="#">스커트</a></li>
+                            <li><a href="#">원피스</a></li>
+                            <li><a href="#">니트</a></li>
+                            <li><a href="#">아우터</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">NEW</a>
+                        <ul class="subm">
+                            <li><a href="#">블라우스</a></li>
+                            <li><a href="#">니트</a></li>
+                            <li><a href="#">아우터</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">MADE</a>
+                        <ul class="subm">
+                            <li><a href="#">셔츠</a></li>
+                            <li><a href="#">니트</a></li>
+                            <li><a href="#">아우터</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">SALE</a>
+                        <ul class="subm">
+                            <li><a href="#">데님</a></li>
+                            <li><a href="#">민소매</a></li>
+                            <li><a href="#">티셔츠</a></li>
+                            <li><a href="#">트레이닝</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">TOP</a>
+                        <ul class="subm">
+                            <li><a href="#">티셔츠</a></li>
+                            <li><a href="#">셔츠</a></li>
+                            <li><a href="#">블라우스</a></li>
+                            <li><a href="#">민소매</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">BOTTOM</a>
+                        <ul class="subm">
+                            <li><a href="#">슬랙스</a></li>
+                            <li><a href="#">데님</a></li>
+                            <li><a href="#">트레이닝</a></li>
+                            <li><a href="#">미니&amp;롱</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#"><span class="knit">KNIT</span></a>
+                        <ul class="subm">
+                            <li><a href="#">가디건</a></li>
+                            <li><a href="#">베스트</a></li>
+                            <li><a href="#">니트</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">OUTER</a>
+                        <ul class="subm">
+                            <li><a href="#">코트</a></li>
+                            <li><a href="#">자켓</a></li>
+                            <li><a href="#">패딩</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="cart-page pay-page">
+            <h1>ORDER CHECK</h1>
+            <p class="cart-subtitle">주문 및 결제</p>
+
+            <div class="cart-layout">
+                <!-- ===== 왼쪽: 주문 입력 ===== -->
+                <div class="cart-left pay-left">
+
+                    <!-- 배송지 -->
+                    <section class="pay-section">
+                        <div class="pay-head">
+                            <h2><span class="req" aria-label="필수 입력">*</span>배송지</h2>
+                            <button type="button" class="pay-link" id="addressChange">배송지 변경 &gt;</button>
+                        </div>
+                        <div class="pay-box pay-box--active" id="addressBox">
+                            <p class="addr-main" id="addrMain">임시 주소지입니다. 이곳에 배송 받을 주소지를 입력해주세요.</p>
+                            <p class="addr-sub" id="addrSub">이름 / 전화번호</p>
+                            <hr class="pay-line">
+                            <p class="addr-door">공동현관번호: <span id="addrDoor">미입력</span></p>
+                            <select id="deliveryMemo" aria-label="배송 메모">
+                                <option value="">배송 메모를 입력해주세요.</option>
+                                <option>문 앞에 놓아주세요.</option>
+                                <option>경비실에 맡겨주세요.</option>
+                                <option>배송 전 연락 부탁드립니다.</option>
+                                <option>부재 시 택배함에 넣어주세요.</option>
+                            </select>
+                        </div>
+                    </section>
+
+                    <!-- 주문상품 -->
+                    <section class="pay-section">
+                        <div class="pay-head"><h2>주문상품</h2></div>
+                        <ul class="pay-items" id="payItems"></ul>
+                    </section>
+
+                    <!-- 쿠폰할인 -->
+                    <section class="pay-section">
+                        <div class="pay-head">
+                            <h2>쿠폰할인</h2>
+                            <a href="#" class="pay-link">쿠폰받기 &gt;</a>
+                        </div>
+                        <button type="button" class="pay-row-box pay-row-box--btn" id="couponToggle" aria-expanded="false" aria-controls="couponPanel">
+                            <span>쿠폰</span>
+                            <span class="coupon-status">
+                                <em id="couponStatus">선택 안 함</em>
+                                <strong id="couponHave">보유 2장</strong>
+                                <i class="toggle-icon" aria-hidden="true">▼</i>
+                            </span>
+                        </button>
+                        <div class="coupon-panel" id="couponPanel" hidden>
+                        <div class="coupon-section">
+                            <div class="coupon-input-wrapper">
+                                <input type="text" id="couponInput" placeholder="쿠폰 코드 입력" aria-label="쿠폰 코드">
+                                <button type="button" id="couponApply">적용</button>
+                            </div>
+                            <p class="coupon-message" id="couponMsg"></p>
+                        </div>
+
+                        <div class="available-coupons">
+                            <p class="coupon-panel__title">사용 가능한 쿠폰</p>
+                            <ul class="coupon-list" id="couponList">
+                                <li class="coupon-item" data-code="WELCOME5" data-rate="0.05">
+                                    <div class="coupon-info">
+                                        <span class="coupon-name">신규 회원 5% 할인쿠폰</span>
+                                        <span class="coupon-desc">신규 가입 즉시 사용 가능</span>
+                                    </div>
+                                    <button type="button" class="coupon-select-btn">적용</button>
+                                </li>
+                                <li class="coupon-item" data-code="WELCOME5B" data-rate="0.05">
+                                    <div class="coupon-info">
+                                        <span class="coupon-name">신규 회원 5% 할인쿠폰</span>
+                                        <span class="coupon-desc">신규 가입 즉시 사용 가능</span>
+                                    </div>
+                                    <button type="button" class="coupon-select-btn">적용</button>
+                                </li>
+                            </ul>
+                        </div>
+
+                        </div>
+                        <p class="pay-limit">사용 한도 <span id="couponLimit">0</span>원 / 보유 <span>0</span>원</p>
+                    </section>
+
+                    <!-- 적립금 -->
+                    <section class="pay-section">
+                        <div class="pay-head"><h2>적립금 사용</h2></div>
+                        <div class="pay-row-box">
+                            <span>적립금</span>
+                            <div class="point-wrap">
+                                <input type="number" id="pointInput" min="0" value="0" aria-label="사용할 적립금">
+                                <button type="button" class="point-max" id="pointMax">최대사용</button>
+                            </div>
+                        </div>
+                        <p class="pay-limit">사용 한도 <span id="pointLimit">0</span>원 / 보유 <span id="pointHave">0</span>원</p>
+                    </section>
+
+                    <!-- 결제수단 -->
+                    <section class="pay-section">
+                        <div class="pay-head"><h2 class="pay-title--accent"><span class="req" aria-label="필수 선택">*</span>결제수단</h2></div>
+                        <ul class="pay-methods pay-box pay-box--active" id="payMethods" role="radiogroup" aria-label="결제수단">
+                            <li><label><input type="radio" name="payMethod" value="card"><span class="radio-dot"></span>신용/체크카드</label></li>
+                            <li><label><input type="radio" name="payMethod" value="bank"><span class="radio-dot"></span>무통장입금</label></li>
+                            <li><label><input type="radio" name="payMethod" value="etc"><span class="radio-dot"></span>기타결제</label></li>
+                        </ul>
+                    </section>
+                </div>
+
+                <!-- ===== 오른쪽: 주문 요약 ===== -->
+                <aside class="cart-right">
+                    <div class="order-summary">
+                        <h2>주문 요약</h2>
+
+                        <div class="summary-row"><span>총 상품 금액</span><span id="sumProduct">0원</span></div>
+                        <div class="summary-row"><span>배송비</span><span id="sumShipping">무료</span></div>
+                        <div class="summary-row discount-row"><span>할인 금액</span><span id="sumDiscount" class="discount-val">0원</span></div>
+                        <div class="summary-row discount-row" id="pointRow" hidden><span>적립금 사용</span><span id="sumPoint" class="discount-val">0원</span></div>
+
+                        <div class="summary-divider"></div>
+                        <div class="summary-row total-row"><span>최종 결제 예정 금액</span><span id="sumTotal">0원</span></div>
+                        <div class="summary-divider"></div>
+
+                        <div class="agree">
+                            <label class="agree-all"><input type="checkbox" id="agreeAll"><span>주문내용 확인 및 결제 동의</span></label>
+                            <label><input type="checkbox" class="agree-item" data-required="1"><span>(필수) 개인정보 수집 · 이용 동의</span></label>
+                            <label><input type="checkbox" class="agree-item" data-required="1"><span>(필수) 개인정보 제3자 정보 제공 동의</span></label>
+                            <label><input type="checkbox" class="agree-item" data-required="1"><span>(필수) 결제대행 서비스 이용약관 동의</span></label>
+                        </div>
+
+                        <div class="cart-actions">
+                            <button type="button" class="btn btn-checkout" id="payBtn">0원 결제하기</button>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </main>
+
+        <div class="wishlist-toast" id="payToast" role="status"></div>
+
+        <footer id="footer">
+            <div class="footer-inner">
+                <div class="footer-top">
+                    <div class="footer-brand">
+                        <img src="./img/logo.svg" alt="NURU 로고" loading="lazy">
+                        <p>Quiet essentials for daily rituals.</p>
+                    </div>
+                    <div class="footer-social" aria-label="소셜 링크">
+                        <a href="#">Instagram</a>
+                        <a href="#">KakaoTalk</a>
+                    </div>
+                </div>
+                <div class="footer-columns">
+                    <div class="footer-column">
+                        <h3>CUSTOMER CENTER</h3>
+                        <ul>
+                            <li>카카오톡 채널톡 (24시간 운영)</li>
+                            <li>상담시간 PM 09:00 - PM 18:00 (월-금)</li>
+                            <li>토요일, 일요일, 공휴일 OFF</li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>RETURN ADRESS</h3>
+                        <ul>
+                            <li>서울특별시 성동구 연무장길 77, 3층 (성수동)</li>
+                            <li>택배를 접수하기 전 채널톡 또는 전화로 접수를 우선적으로 부탁드립니다.</li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>COMPANY PROFILE</h3>
+                        <ul>
+                            <li>상호명: (주) NURU</li>
+                            <li>사업장 주소: 서울특별시 성동구 연무장길 77, 3층 (성수동)</li>
+                            <li>사업자 등록번호: 120-88-01924</li>
+                            <li>통신판매업 신고: 제 2026-서울성동-0123 호</li>
+                            <li>대표번호: 02-555-2783</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <script src="jquery/like.js"></script>
+        <script src="jquery/cart.js"></script>
+        <script src="jquery/payment.js"></script>
+        <script src="jquery/payment.js"></script>
+        <script src="jquery/address-modal.js"></script>
+    </body>
+    </html>

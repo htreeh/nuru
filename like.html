@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>찜</title>
+    <link rel="stylesheet" href="./css/like.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-top">
+            <a class="logo" href="index.html"><img src="./img/logo.svg" alt="NURU 홈"></a>
+            <div class="header-tools">
+                <img src="./img/search.png" alt="">
+                <input type="search" aria-label="검색어" placeholder="검색어를 입력해주세요.">
+                <a href="like.html" class="like" aria-label="찜 목록">
+                    <img src="./img/like.svg" alt="아이콘">
+                    <b class="like-count" data-like-count aria-live="polite">0</b>
+                </a>
+                <a href="cart.html" class="cart" aria-label="장바구니">
+                    <img src="./img/local_mall.svg" alt="아이콘">
+                    <b class="cart-count" data-cart-count aria-live="polite">0</b>
+                </a>
+            </div>
+        </div>
+        <nav class="nav">
+                <ul>
+                    <li><a href="#">BEST</a>
+                        <ul class="subm">
+                            <li><a href="#">블라우스</a></li>
+                            <li><a href="#">팬츠</a></li>
+                            <li><a href="#">스커트</a></li>
+                            <li><a href="#">원피스</a></li>
+                            <li><a href="#">니트</a></li>
+                            <li><a href="#">아우터</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="#">NEW</a>
+                        <ul class="subm">
+                            <li><a href="#">블라우스</a></li>
+                            <li><a href="#">니트</a></li>
+                            <li><a href="#">아우터</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="#">MADE</a>
+                        <ul class="subm">
+                            <li><a href="#">셔츠</a></li>
+                            <li><a href="#">니트</a></li>
+                            <li><a href="#">아우터</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="#">SALE</a>
+                        <ul class="subm">
+                            <li><a href="#">데님</a></li>
+                            <li><a href="#">민소매</a></li>
+                            <li><a href="#">티셔츠</a></li>
+                            <li><a href="#">트레이닝</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="#">TOP</a>
+                        <ul class="subm">
+                            <li><a href="#">티셔츠</a></li>
+                            <li><a href="#">셔츠</a></li>
+                            <li><a href="#">블라우스</a></li>
+                            <li><a href="#">민소매</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="#">BOTTOM</a>
+                        <ul class="subm">
+                            <li><a href="#">슬랙스</a></li>
+                            <li><a href="#">데님</a></li>
+                            <li><a href="#">트레이닝</a></li>
+                            <li><a href="#">미니&롱</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="#"><span class="knit">KNIT</span></a>
+                        <ul class="subm">
+                            <li><a href="#">가디건</a></li>
+                            <li><a href="#">베스트</a></li>
+                            <li><a href="#">니트</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="#">OUTER</a>
+                        <ul class="subm">
+                            <li><a href="#">코트</a></li>
+                            <li><a href="#">자켓</a></li>
+                            <li><a href="#">패딩</a></li>
+                        </ul>
+                    </li>
+
+                </ul>
+            </nav>
+            <!-- //메인메뉴 -->
+    </header>
+
+    <main class="page">
+        <h1 class="wish-title">LIKE COMMUITE <span>총 <b data-like-count>0</b>개</span></h1>
+        <ul class="grid" id="wishlist-grid" aria-label="찜한 상품 목록"></ul>
+        <p class="empty" id="wishlist-empty" hidden>찜한 상품이 없습니다.<br>상품의 하트를 눌러 찜 목록에 담아보세요.</p>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-top">
+            <div class="footer-brand">
+                <a href="index.html"><img src="./img/logo.svg" alt="NURU"></a>
+                <p>QUIET ESSENTIALS FOR DAILY RITUALS.</p>
+            </div>
+            <div class="footer-social"><a href="#">Instagram</a><a href="#">KakaoTalk</a></div>
+        </div>
+        <div class="footer-columns">
+            <section>
+                <h2>CUSTOMER CENTER</h2>
+                <p>카카오톡 채널톡 (24시간 운영)</p>
+                <p>상담시간 PM 09:00 - PM 18:00 (월-금)</p>
+                <p>토요일, 일요일, 공휴일 OFF</p>
+            </section>
+            <section>
+                <h2>RETURN ADDRESS</h2>
+                <p>서울특별시 성동구 연무장길 77, 3층 (성수동)</p>
+                <p>택배를 접수하기 전 채널톡 또는 전화로 접수를 우선적으로 부탁드립니다.</p>
+            </section>
+            <section>
+                <h2>COMPANY PROFILE</h2>
+                <p>상호명: (주) NURU</p>
+                <p>사업장 주소: 서울특별시 성동구 연무장길 77, 3층 (성수동)</p>
+                <p>사업자 등록번호: 120-88-01924</p>
+                <p>통신판매업 신고: 제 2026-서울성동-0123 호</p>
+                <p>대표번호: 02-555-2783</p>
+            </section>
+        </div>
+    </footer>
+
+    <script src="./jquery/like.js"></script>
+</body>
+</html>
